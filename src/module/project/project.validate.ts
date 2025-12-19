@@ -9,14 +9,6 @@ export const projectSchema = z.object({
         .string()
         .min(2, "Project name is required"),
 
-    // image: z
-    //     .string()
-    //     .min(1, "Main image is required"),
-
-    // images: z
-    //     .array(z.string().min(1))
-    //     .min(1, "At least one project image is required"),
-
     link: z
         .string()
         .url("Invalid project link"),

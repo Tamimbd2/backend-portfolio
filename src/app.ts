@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config(); // ⬅️ MUST be first
 import express, { Application, NextFunction, Request, Response } from "express";
 import cors from "cors";
-import router from "./route";
+import router from "./routes";
 
 
 const app: Application = express();
@@ -41,5 +41,13 @@ app.use(
         });
     }
 );
+
+// not found
+app.use((req: Request, res: Response) => {
+    res.status(404).json({
+        success: false,
+        message: "Not Found",
+    });
+})
 
 export default app;
