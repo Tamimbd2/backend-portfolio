@@ -12,7 +12,7 @@ const app: Application = express();
 // =====================
 app.use(cors({
     origin: [
-        "http://localhost:3000",
+        "https://tamimdev.tech",
         "http://localhost:5173"
     ],
     credentials: true
